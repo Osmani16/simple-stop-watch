@@ -1,0 +1,56 @@
+body {
+    background-color: #444444;
+}
+
+* {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    height: 150px;
+    width: 500px;
+
+    border: 5px solid #4b3ca4;
+    border-radius: 30px;
+}
+
+.inside_buttons {
+    position: absolute;
+    left: 50%;
+    top: 98%;
+    transform: translate(-50%, -100%);
+}
+
+.inside_buttons button {
+    background-color: #555555;
+
+    border: 3px solid white;
+    border-radius: 20px;
+
+    height: 25px;
+    width: 75px;
+
+    text-align: center;
+    margin-left: 5px;
+}
+
+.inside_buttons button:hover {
+    background-color: #666666;
+}
+
+.time_container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.time_container .time_display {
+    color: green;
+    font-size: 60px;
+    font-weight: bold;
+}
