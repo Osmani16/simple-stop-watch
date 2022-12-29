@@ -16,6 +16,7 @@ let seconds = 0;
 const zero_pad = (num, places) => String(num).padStart(places, '0');
 
 start_btn.addEventListener('click', () => {
+    start_btn.disabled = true;
     const count = () => {
         seconds += 1000;
         seconds_passed = seconds / 1000;
@@ -35,6 +36,7 @@ start_btn.addEventListener('click', () => {
         time_elapsed = `${zero_pad(hours_passed, 2)}:${zero_pad(minutes_passed, 2)}:${zero_pad(seconds_passed, 2)}`;
         time_display.innerText = time_elapsed;
         reset_btn.addEventListener('click', () => {
+            start_btn.disabled = false;
             clearInterval(stop_watch);
             seconds = 0;
             seconds_passed = 0;
