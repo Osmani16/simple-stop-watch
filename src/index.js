@@ -54,7 +54,7 @@ start_btn.addEventListener('click', () => {
             time_display.innerText = time_elapsed;
             reset_btn.addEventListener('click', () => {
                 start_btn.disabled = false;
-                pause_btn.disabled = false;
+                pause_btn.disabled = true;
                 clearInterval(stop_watch);
                 seconds = 0;
                 seconds_passed = 0;
