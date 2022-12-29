@@ -33,19 +33,10 @@ start_btn.addEventListener('click', () => {
         time_elapsed = `${zero_pad(hours_passed, 2)}:${zero_pad(minutes_passed, 2)}:${zero_pad(seconds_passed, 2)}`;
         time_display.innerText = time_elapsed;
         reset_btn.addEventListener('click', () => {
-            clearInterval(count_down);
-            time_elapsed = `${zero_pad(0, 2)}:${zero_pad(0, 2)}:${zero_pad(0, 2)}`;
-            time_display.innerText = time_elapsed;
+            clearInterval(stop_watch);
+            time_display.innerText = `00:00:00`;
         });
     };
 
     const stop_watch = setInterval(count_down, 1000)
-});
-
-pause_btn.addEventListener('click', () => {
-    const pause_date = new Date();
-    pause_time = pause_date.getTime();
-    console.log(start_time, pause_time)
-    seconds_passed = Math.floor((pause_time - start_time) / sec_format);
-    console.log(seconds_passed);
 });
