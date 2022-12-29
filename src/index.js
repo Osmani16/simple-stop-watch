@@ -50,8 +50,6 @@ start_btn.addEventListener('click', () => {
                 hours_passed++;
                 minutes_passed = 0;
             }
-            time_elapsed = `${zero_pad(hours_passed, 2)}:${zero_pad(minutes_passed, 2)}:${zero_pad(seconds_passed, 2)}`;
-            time_display.innerText = time_elapsed;
             reset_btn.addEventListener('click', () => {
                 start_btn.disabled = false;
                 pause_btn.disabled = false;
@@ -75,3 +73,8 @@ start_btn.addEventListener('click', () => {
         stop_watch = setInterval(count, 1000);
     }
 });
+
+const update_display = setInterval(() => {
+    time_elapsed = `${zero_pad(hours_passed, 2)}:${zero_pad(minutes_passed, 2)}:${zero_pad(seconds_passed, 2)}`;
+    time_display.innerText = time_elapsed;
+}, 10);
