@@ -1,5 +1,0 @@
-✅make seconds reset to 0 and keep counting when it reaches 60.
-
-✅fix bug where you can press start multiple times (possibly disable the button)
-
-✅make pause button pause the timer but store the time so it will keep going when you press start.
